@@ -1,33 +1,86 @@
 package mmlib4j.images.impl;
 
-import mmlib4j.images.GrayScaleImageUnsafe;
+import mmlib4j.images.BinaryImage;
+import mmlib4j.images.ColorImage;
+import mmlib4j.images.GrayScaleImage;
+import mmlib4j.images.RealImage;
 
-public class ImageFactoryUnsafe {
+public class ImageFactoryUnsafe extends ImageFactory {
 	
-	public static final int UNSAFE_8BITS = 8;
-	public static final int UNSAFE_16BITS = 16;
+	public static ImageFactory instance = new ImageFactoryUnsafe(); 
 
-	public static GrayScaleImageUnsafe createGrayScaleImageUnsafe(int depth, int width, int height) {
-		if(depth == UNSAFE_8BITS) {
+	@Override
+	public GrayScaleImage createGrayScaleImage(int depth, int width, int height) {
+		if(depth == DEPTH_8BITS)
 			return new ByteImageUnsafe(width, height);
-		} else if(depth == UNSAFE_16BITS) {
-			return null;
-			//return new ShortImageUnsafe(width, height);
-		} else {
-			return null;
-		}		
+		else if(depth == DEPTH_16BITS)
+			return new ShortImageUnsafe(width, height);
+		return  null;	
 	}
-	
-	public static GrayScaleImageUnsafe createReferenceGrayScaleImageUnsafe(int depth, long address, int width, int height) {		
-		if(depth == UNSAFE_8BITS) {
-			return new ByteImageUnsafe(address, width, height);
-		} else if(depth == UNSAFE_16BITS) {
-			return null;
-			//return new ShortImageUnsafe(address, width, height);
-		} else {
-			return null;
-		}		
-		
+
+	@Override
+	public BinaryImage createBinaryImage(int width, int height) {
+		return null;
 	}
-	
+
+	@Override
+	public ColorImage createColorImage(int width, int height) {
+		return null;
+	}
+
+	@Override
+	public RealImage createRealImage(int width, int height) {
+		return null;
+	}
+
+	@Override
+	public ColorImage createCopyColorImage(GrayScaleImage img) {
+		return null;
+	}
+
+	@Override
+	public ColorImage createCopyColorImage(BinaryImage img) {
+		return null;
+	}
+
+	@Override
+	public ColorImage createCopyColorImage(ColorImage img) {
+		return null;
+	}
+
+	@Override
+	public GrayScaleImage createCopyGrayScaleImage(GrayScaleImage img) {
+		return null;
+	}
+
+	@Override
+	public BinaryImage createCopyBinaryImage(BinaryImage img) {
+		return null;
+	}
+
+	@Override
+	public RealImage createCopyRealImage(RealImage img) {
+		return null;
+	}
+
+	@Override
+	public ColorImage createReferenceColorImage(int[] pixels, int width, int height) {
+		return null;
+	}
+
+	@Override
+	public RealImage createReferenceRealImage(float[] pixels, int width, int height) {
+		return null;
+	}
+
+	@Override
+	public BinaryImage createReferenceBinaryImage(boolean[] pixels, int width, int height) {
+		return null;
+	}
+
+	@Override
+	public GrayScaleImage createReferenceGrayScaleImage(int depth, Object pixels, int width, int height) {
+		return null;
+	}
+
 }

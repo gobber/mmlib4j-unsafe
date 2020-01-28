@@ -25,13 +25,31 @@
       </plugin>
     </plugins>    
   </build>
+  
+  <repositories>
+	<repository>
+    	<id>jitpack.io</id>
+    	<url>https://jitpack.io</url>
+	</repository>
+  </repositories>
+	
   <dependencies>
   	<dependency>
+	   	<groupId>com.github.gobber</groupId>
+	   	<artifactId>ndarrays4j-unsafe</artifactId>
+	   	<version>-d488c6836d-1</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.github.wonderalexandre</groupId>
+	    <artifactId>mmlib4j</artifactId>
+	   	<version>mmlib4j-v2019-v1.0-g101487b-96</version>
+	</dependency>
+  	<!--dependency>
     	<groupId>mmlib4j</groupId>
 		<artifactId>mmlib4j-api</artifactId>
 		<version>1.0</version>
     	<scope>system</scope>
-    	<systemPath>${project.basedir}/jars/mmlib4j-api-1.0.jar</systemPath>
-	</dependency>
+    	<systemPath>${project.basedir}/../mmlib4j-v2019/build/mmlib4j-api-1.0.jar</systemPath>
+	</dependency-->
   </dependencies>
 </project>
