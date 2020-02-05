@@ -40,7 +40,7 @@ public class ShortImageUnsafe extends AbstractGrayScale implements GrayScaleImag
 	
 	@Override
 	public int [] getShape() {
-		return this.pixels.shape();
+		return pixels.shape();
 	}
 	
 	@Override
@@ -99,20 +99,21 @@ public class ShortImageUnsafe extends AbstractGrayScale implements GrayScaleImag
         int x = Math.abs(oldWidth - width)/2;
         int y = Math.abs(oldHeight - height)/2;        
        
-        int i = pixels.offset(x, y);
-        
+        int i = pixels.offset(x, y);        
 		this.pixels.address(pixels.vector().getPosition(i));
 		this.pixels.shape(new int[]{width, height});*/
 	}	
 
 	@Override
-	// this method doesn't work yet
-	public void setPixels(int width, int height, Object pixels) {}
+	public void setPixels(int width, int height, Object pixels) {
+		this.width = width;
+		this.height = height;
+		this.pixels = (NdShortArray) pixels;
+	}
 	
 	@Override
-	// this method doesn't work yet
-	public Object getPixels() {
-		return null;
+	public NdShortArray getPixels() {
+		return pixels;
 	}
 
 }

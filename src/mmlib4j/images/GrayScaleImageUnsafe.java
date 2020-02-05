@@ -9,5 +9,5 @@ public interface GrayScaleImageUnsafe extends GrayScaleImage {
 	public String getType();
 	
 	public int getOrder();
-
+	
 }

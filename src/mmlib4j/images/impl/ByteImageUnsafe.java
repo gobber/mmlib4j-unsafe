@@ -40,7 +40,7 @@ public class ByteImageUnsafe extends AbstractGrayScale implements GrayScaleImage
 	
 	@Override
 	public int [] getShape() {
-		return new int[] {width, height};
+		return pixels.shape();
 	}
 	
 	@Override
@@ -104,12 +104,16 @@ public class ByteImageUnsafe extends AbstractGrayScale implements GrayScaleImage
 	
 	@Override
 	// this method doesn't work yet
-	public void setPixels(int width, int height, Object pixels) {}
+	public void setPixels(int width, int height, Object pixels) {
+		this.width = width;
+		this.height = height;
+		this.pixels = (NdByteArray) pixels;
+	}
 
 	@Override
 	// this method doesn't work yet
-	public Object getPixels() {
-		return null;
+	public NdByteArray getPixels() {
+		return pixels;
 	}
 
 }

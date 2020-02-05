@@ -42,7 +42,7 @@
 	<dependency>
 	    <groupId>com.github.wonderalexandre</groupId>
 	    <artifactId>mmlib4j</artifactId>
-	   	<version>mmlib4j-v2019-v1.0-g101487b-96</version>
+	   	<version>mmlib4j-v2019-v1.0-g5e82e82-98</version>
 	</dependency>
   	<!--dependency>
     	<groupId>mmlib4j</groupId>

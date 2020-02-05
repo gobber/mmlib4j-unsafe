@@ -5,9 +5,9 @@ import mmlib4j.images.ColorImage;
 import mmlib4j.images.GrayScaleImage;
 import mmlib4j.images.RealImage;
 
-public class ImageFactoryUnsafe extends ImageFactory {
+public class ImageFactoryUnsafe extends AbstractImageFactory {
 	
-	public static ImageFactory instance = new ImageFactoryUnsafe(); 
+	public static AbstractImageFactory instance = new ImageFactoryUnsafe(); 
 
 	@Override
 	public GrayScaleImage createGrayScaleImage(int depth, int width, int height) {
