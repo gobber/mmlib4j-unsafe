@@ -90,6 +90,7 @@ public class ByteImageUnsafe extends AbstractGrayScale implements GrayScaleImage
 	
 	@Override
 	public void resizeCenter(int width, int height) {
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 		/*int oldWidth = this.width;
     	int oldHeight = this.height;
     	this.width = width;

@@ -20,67 +20,67 @@ public class ImageFactoryUnsafe extends AbstractImageFactory {
 
 	@Override
 	public BinaryImage createBinaryImage(int width, int height) {
-		return null;
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 	}
 
 	@Override
 	public ColorImage createColorImage(int width, int height) {
-		return null;
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 	}
 
 	@Override
 	public RealImage createRealImage(int width, int height) {
-		return null;
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 	}
 
 	@Override
 	public ColorImage createCopyColorImage(GrayScaleImage img) {
-		return null;
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 	}
 
 	@Override
 	public ColorImage createCopyColorImage(BinaryImage img) {
-		return null;
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 	}
 
 	@Override
 	public ColorImage createCopyColorImage(ColorImage img) {
-		return null;
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 	}
 
 	@Override
 	public GrayScaleImage createCopyGrayScaleImage(GrayScaleImage img) {
-		return null;
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 	}
 
 	@Override
 	public BinaryImage createCopyBinaryImage(BinaryImage img) {
-		return null;
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 	}
 
 	@Override
 	public RealImage createCopyRealImage(RealImage img) {
-		return null;
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 	}
 
 	@Override
 	public ColorImage createReferenceColorImage(int[] pixels, int width, int height) {
-		return null;
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 	}
 
 	@Override
 	public RealImage createReferenceRealImage(float[] pixels, int width, int height) {
-		return null;
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 	}
 
 	@Override
 	public BinaryImage createReferenceBinaryImage(boolean[] pixels, int width, int height) {
-		return null;
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 	}
 
 	@Override
 	public GrayScaleImage createReferenceGrayScaleImage(int depth, Object pixels, int width, int height) {
-		return null;
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 	}
 
 }

@@ -91,6 +91,7 @@ public class ShortImageUnsafe extends AbstractGrayScale implements GrayScaleImag
 
 	@Override
 	public void resizeCenter(int width, int height) {				
+		throw new UnsupportedOperationException("This method doesn't work yet!");
 		/*int oldWidth = this.width;
     	int oldHeight = this.height;
     	this.width = width;
