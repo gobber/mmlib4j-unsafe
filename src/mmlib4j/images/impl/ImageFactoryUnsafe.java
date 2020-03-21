@@ -6,9 +6,12 @@ import mmlib4j.images.GrayScaleImage;
 import mmlib4j.images.RealImage;
 
 public class ImageFactoryUnsafe extends AbstractImageFactory {
-	
-	public static AbstractImageFactory instance = new ImageFactoryUnsafe(); 
 
+	
+	public static void setInstance() {
+		AbstractImageFactory.instance = new ImageFactoryUnsafe();
+	}
+	
 	@Override
 	public GrayScaleImage createGrayScaleImage(int depth, int width, int height) {
 		if(depth == DEPTH_8BITS)
