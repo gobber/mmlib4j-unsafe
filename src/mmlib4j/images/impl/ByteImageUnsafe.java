@@ -1,11 +1,11 @@
 package mmlib4j.images.impl;
 
-import mmlib4j.images.GrayScaleImageUnsafe;
+import mmlib4j.images.Image2DUnsafe;
 import mmlib4j.images.impl.AbstractGrayScale;
 import mmlib4j.images.impl.ByteImage;
 import ndarrays4j.arrays.integer.NdByteArray;
 
-public class ByteImageUnsafe extends AbstractGrayScale implements GrayScaleImageUnsafe{
+public class ByteImageUnsafe extends AbstractGrayScale implements Image2DUnsafe{
 	
 	private NdByteArray pixels;
 	
@@ -13,29 +13,24 @@ public class ByteImageUnsafe extends AbstractGrayScale implements GrayScaleImage
 		this.pixels = pixels;
 		this.width = width;
 		this.height = height;
+		setPixelIndexer( PixelIndexer.getExceptionIndexer(getWidth(), getHeight()) );
 	}
 		
 	public ByteImageUnsafe(int width, int height) {
-		this.pixels = new NdByteArray(new int[] {width, height});
-		this.width = width;
-		this.height = height;
+		this(new NdByteArray(new int[] {width, height}), width, height);
 	}
 	
 	public ByteImageUnsafe(long address, int width, int height) {
-		this.pixels = new NdByteArray(address, new int[] {width, height});
-		this.width = width;
-		this.height = height;
+		this(new NdByteArray(address, new int[] {width, height}), width, height);
 	}
 	
 	public ByteImageUnsafe(long address, int width, int height, int order) {
-		this.pixels = new NdByteArray(address, new int[] {width, height}, order);
-		this.width = width;
-		this.height = height;
+		this(new NdByteArray(address, new int[] {width, height}, order), width, height);
 	}
 	
 	@Override
 	public String getType() {	
-		return "ByteImage";
+		return "ByteImageUnsafe";
 	}	
 	
 	@Override

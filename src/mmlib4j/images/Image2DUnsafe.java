@@ -1,6 +1,6 @@
 package mmlib4j.images;
 
-public interface GrayScaleImageUnsafe extends GrayScaleImage {
+public interface Image2DUnsafe extends Image2D {
 	
 	public long getAddress();
 	
@@ -9,5 +9,5 @@ public interface GrayScaleImageUnsafe extends GrayScaleImage {
 	public String getType();
 	
 	public int getOrder();
-	
+	 
 }

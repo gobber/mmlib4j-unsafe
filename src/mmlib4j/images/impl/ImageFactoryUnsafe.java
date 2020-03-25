@@ -53,7 +53,7 @@ public class ImageFactoryUnsafe extends AbstractImageFactory {
 
 	@Override
 	public GrayScaleImage createCopyGrayScaleImage(GrayScaleImage img) {
-		throw new UnsupportedOperationException("This method doesn't work yet!");
+		return img.duplicate();
 	}
 
 	@Override
@@ -66,6 +66,11 @@ public class ImageFactoryUnsafe extends AbstractImageFactory {
 		throw new UnsupportedOperationException("This method doesn't work yet!");
 	}
 
+	
+	
+	//////////////////////////////////////////////////////////
+	//      create new references for the object pixels[] ///
+	/////////////////////////////////////////////////////////
 	@Override
 	public ColorImage createReferenceColorImage(int[] pixels, int width, int height) {
 		throw new UnsupportedOperationException("This method doesn't work yet!");
@@ -83,7 +88,20 @@ public class ImageFactoryUnsafe extends AbstractImageFactory {
 
 	@Override
 	public GrayScaleImage createReferenceGrayScaleImage(int depth, Object pixels, int width, int height) {
-		throw new UnsupportedOperationException("This method doesn't work yet!");
+		if(depth == DEPTH_8BITS)
+			if(pixels instanceof byte[])
+				return new ByteImage((byte[])pixels, width, height);
+		if(depth == DEPTH_16BITS)
+			if(pixels instanceof short[])
+				return new ShortImage((short[])pixels, width, height);
+		else if(depth == DEPTH_32BITS){
+			if(pixels instanceof int[])
+				return new IntegerImage((int[])pixels, width, height);
+		}
+		throw new UnsupportedOperationException("This method (createReferenceGrayScaleImage) doesn't work yet!");
+		
+		
+		
 	}
 
 }
