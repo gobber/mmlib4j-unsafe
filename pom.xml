@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>mmlib4j-unsafe</groupId>
   <artifactId>mmlib4j-unsafe</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <packaging>jar</packaging>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -34,16 +34,8 @@
   </repositories>
 	
   <dependencies>
-  	<dependency>
-	   	<groupId>com.github.gobber</groupId>
-	   	<artifactId>ndarrays4j-unsafe</artifactId>
-	   	<version>-d488c6836d-1</version>
-	</dependency>
-	<dependency>
-	    <groupId>com.github.wonderalexandre</groupId>
-	    <artifactId>mmlib4j</artifactId>
-	    <version>mmlib4j-v2020-v1.0-g5e82e82-99</version>
-	</dependency>
+  	
+	
   	<!--dependency>
     	<groupId>mmlib4j</groupId>
 		<artifactId>mmlib4j-api</artifactId>
@@ -51,5 +43,17 @@
     	<scope>system</scope>
     	<systemPath>${project.basedir}/../mmlib4j-v2019/build/mmlib4j-api-1.0.jar</systemPath>
 	</dependency-->
+	<dependency>
+	    <groupId>com.github.gobber</groupId>
+	    <artifactId>ndarrays4j-unsafe</artifactId>
+	    <version>-d488c6836d-1</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.github.wonderalexandre</groupId>
+	    <artifactId>mmlib4j</artifactId>
+	    <version>1.1</version>
+	</dependency>
+  	
   </dependencies>
 </project>

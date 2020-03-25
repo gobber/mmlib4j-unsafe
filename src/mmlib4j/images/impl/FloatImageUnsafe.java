@@ -116,10 +116,10 @@ public class FloatImageUnsafe extends AbstractImage2D implements RealImage, Imag
      * Modifica a matriz de pixel da imagem para os valores da matriz dada
      * @param matrix 
      */
-    public void setPixels(int width, int height, NdFloatArray pixels){
+    public void setPixels(int width, int height, Object pixels){
         this.width = width;
         this.height = height;
-        this.pixels = pixels;
+        this.pixels = (NdFloatArray) pixels;
         setPixelIndexer( PixelIndexer.getExceptionIndexer(getWidth(), getHeight()) );
     }
     
@@ -200,5 +200,7 @@ public class FloatImageUnsafe extends AbstractImage2D implements RealImage, Imag
 	public int getOrder() {
 		return pixels.order();
 	}
+
+	
 
 }
