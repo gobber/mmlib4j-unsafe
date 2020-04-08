@@ -18,6 +18,8 @@ public class ImageFactoryUnsafe extends AbstractImageFactory {
 			return new ByteImageUnsafe(width, height);
 		else if(depth == DEPTH_16BITS)
 			return new ShortImageUnsafe(width, height);
+		else if(depth == DEPTH_32BITS)
+			return new IntegerImageUnsafe(width, height);
 		return  null;	
 	}
 
@@ -33,7 +35,7 @@ public class ImageFactoryUnsafe extends AbstractImageFactory {
 
 	@Override
 	public RealImage createRealImage(int width, int height) {
-		throw new UnsupportedOperationException("This method doesn't work yet!");
+		return new FloatImageUnsafe(width, height);
 	}
 
 	@Override
@@ -63,7 +65,7 @@ public class ImageFactoryUnsafe extends AbstractImageFactory {
 
 	@Override
 	public RealImage createCopyRealImage(RealImage img) {
-		throw new UnsupportedOperationException("This method doesn't work yet!");
+		return img.duplicate();
 	}
 
 	
